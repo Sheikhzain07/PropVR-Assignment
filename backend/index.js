@@ -4,9 +4,6 @@ const movieRouter = require("./routes/movie.routes");
 const userRouter = require("./routes/user.routes");
 const dbConnection = require("./database/connect");
 
-// require("dotenv").config();
-// const env = process.env;
-
 const app = express();
 app.use(cors());
 app.use(express.json());
