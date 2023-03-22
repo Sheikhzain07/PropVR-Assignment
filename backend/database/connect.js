@@ -1,6 +1,5 @@
 const { connect: connectMongo, ServerApiVersion, set } = require("mongoose");
 require("dotenv").config();
-
 const env = process.env;
 
 const connect = () => {
@@ -14,7 +13,7 @@ const connect = () => {
       })
       .catch((err) => {
         console.log(err.message);
-        return reject("Something went Wrong!!");
+        return reject("Something went Wrong");
       });
   });
 };
