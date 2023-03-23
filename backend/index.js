@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/movies", movieRouter);
 app.use("/users", userRouter);
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("prop assignment");
 });
 
