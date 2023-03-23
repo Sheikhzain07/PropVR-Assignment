@@ -1,0 +1,38 @@
+#displayMovies {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  gap: 15px;
+  margin: auto;
+  margin-top: 2%;
+}
+
+#moviesHeading {
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+}
+
+@media screen and (max-width: 800px) {
+  #posterDiv {
+    height: 380px;
+    width: 95%;
+    margin: auto;
+  }
+
+  #displayMovies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  /* #posterDiv{
+        height: 230px;
+        width: 95%;
+        margin: auto;
+    } */
+
+  #displayMovies {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
