@@ -3,6 +3,7 @@ const cors = require("cors");
 const movieRouter = require("./routes/movie.routes");
 const userRouter = require("./routes/user.routes");
 const dbConnection = require("./database/connect");
+const dotenv = require("dotenv").config();
 
 const app = express();
 app.use(cors());
@@ -25,7 +26,7 @@ app.get("/", (req, res) => {
 //     console.log(error);
 //   });
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 dbConnection()
   .then(() => {
     app.listen(port, () => {
